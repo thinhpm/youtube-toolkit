@@ -3,10 +3,14 @@ from pyforms.basewidget import BaseWidget
 from pyforms.controls import ControlText
 from pyforms.controls import ControlButton
 from pyforms.controls import ControlCombo
+from pyforms import settings as formSettings
 import os
 import subprocess
 
+# formSettings.PYFORMS_STYLESHEET = 'css/style.css'
+
 pwd = os.getcwd()
+
 
 class YoutubeToolKit(BaseWidget):
     def __init__(self):
