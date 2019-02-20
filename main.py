@@ -92,8 +92,8 @@ def processVideo(file_video, file_ffmpeg, stt = 0):
     path_file = pwd + '/ffmpeg-files/' + file_ffmpeg
     fo = open(path_file, "r")
     lines = fo.readlines()
-    print("/input/" + str(file_video) + '.mp4')
-    return "/input/" + str(file_video)
+
+    # return "/input/" + str(file_video)
 
     if len(lines) > 0:
         string_process = lines[0]
@@ -133,7 +133,7 @@ def uploadToYoutube(account, file_upload, data):
     print ("Uploading...")
     path_file_account = pwd + '/accounts/' + account
 
-    if True:
+    if isFirstUpload(account):
         os.system('py youtube-upload --title="' + str(data['title'])
                   + '" --description="' + str(data['description'])
                   + '" --tags="' + str(data['tags'])
