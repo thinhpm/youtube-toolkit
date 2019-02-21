@@ -66,7 +66,9 @@ class YoutubeToolKit(BaseWidget):
 
         self._label_alert.value = "Uploading..."
 
-        uploadToYoutube(self._accounts.value, output_file_name, data)
+        # uploadToYoutube(self._accounts.value, output_file_name, data)
+
+        # os.remove(output_file_name)
         self._label_alert.value = "Success!"
         print("Done")
 
